@@ -32,6 +32,7 @@ public:
                 depth[i]--;
                 if(depth[i] == 0)
                     que.push(i);
+                //这个部分相当于如果前序课程都学完了，才可以下来的课程
             }
         }
         if(result.size() < numCourses)
