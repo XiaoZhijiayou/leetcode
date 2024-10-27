@@ -65,6 +65,8 @@ int partition(vector<int>& arr, int left, int right) {
         while (left < right && arr[right] >= pivot) {//这个是为了保证右边界的位置是大于pivot的
             --right;
         }
+        //从右边开始，right 指针向左移动，直到找到一个小于基准值的元素。
+        //这个元素不在正确的位置，因此需要放到基准值的左边
         arr[left] = arr[right];
         while (left < right && arr[left] <= pivot) {//这个是为了保证左边界的位置是小于等于pivot的
             ++left;
@@ -73,7 +75,9 @@ int partition(vector<int>& arr, int left, int right) {
     }//在while循环结束shift之后，left和right指向的位置是分割点，把pivot放到分割点的位置
     arr[left] = pivot;
     return left;
-}
+}//这个相对于获得了一个中间位置，然后把左边的数都放到左边，右边的数都放到右边，中间的数放到中间。
+//然后把pivot放到分割点的位置。
+//然后递归的对左右两个子序列进行排序。
 void quickSort(vector<int>& arr, int left, int right) {
     if (left < right) {
         int pivotIndex = partition(arr, left, right);
