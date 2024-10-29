@@ -12,7 +12,7 @@ public:
     vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
         vector<vector<int>> res;
         multiset<pair<int,int>> events;
-        multiset<int> height;
+        multiset<int> height;//这个是按照从小到大的排列顺序去排列的
         height.insert(0);//为何要先插入一个0？？
         int n = buildings.size();
         for(int i = 0; i < n ; i++){
