@@ -3,12 +3,12 @@
 using namespace std;
 
 // Definition for a binary tree node.
-  struct TreeNode {
- 	int val;
- 	struct TreeNode *left;
- 	struct TreeNode *right;
- 	TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-  };
+struct TreeNode {
+    int val;
+    struct TreeNode *left;
+    struct TreeNode *right;
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+};
 
 class Solution {
 public:
@@ -21,20 +21,20 @@ public:
      * @return int整型
      */
     int count = 0;
-    TreeNode* result = nullptr;
-    void dg(TreeNode* root,int k){
-        if(root == nullptr || count > k)
+    TreeNode *result = nullptr;
+    void dg(TreeNode *root, int k) {
+        if (root == nullptr || count > k)
             return;
         dg(root->left, k);
         count++;
-        if(count == k)
+        if (count == k)
             result = root;
-        dg(root->right,k);
+        dg(root->right, k);
     }
-    int KthNode(TreeNode* proot, int k) {
+    int KthNode(TreeNode *proot, int k) {
         // write code here
-        dg(proot,k);
-        if(result)
+        dg(proot, k);
+        if (result)
             return result->val;
         else
             return -1;
@@ -44,7 +44,7 @@ public:
 // 测试代码
 int main() {
     Solution s;
-    TreeNode* root = new TreeNode(5);
+    TreeNode *root = new TreeNode(5);
     root->left = new TreeNode(3);
     root->right = new TreeNode(7);
     root->left->left = new TreeNode(2);
@@ -52,6 +52,6 @@ int main() {
     root->right->left = new TreeNode(6);
     root->right->right = new TreeNode(8);
     int k = 3;
-    cout << s.KthNode(root, k) << endl; // 4
+    cout << s.KthNode(root, k) << endl;// 4
     return 0;
 }

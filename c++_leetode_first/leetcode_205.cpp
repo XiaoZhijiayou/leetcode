@@ -30,14 +30,13 @@ using namespace std;
 class Solution {
 public:
     bool isIsomorphic(string s, string t) {
-        unordered_map<char, char> st,ts;
-        if(s.size()!= t.size()) return false;
-        for(int i=0;i<s.size();i++){
-            if(st.find(s[i])==st.end() && ts.find(t[i])==ts.end()){
-                st[s[i]]=t[i];
-                ts[t[i]]=s[i];
-            }
-            else if(st[s[i]]!=t[i] || ts[t[i]]!=s[i]){ // 出现冲突
+        unordered_map<char, char> st, ts;
+        if (s.size() != t.size()) return false;
+        for (int i = 0; i < s.size(); i++) {
+            if (st.find(s[i]) == st.end() && ts.find(t[i]) == ts.end()) {
+                st[s[i]] = t[i];
+                ts[t[i]] = s[i];
+            } else if (st[s[i]] != t[i] || ts[t[i]] != s[i]) {// 出现冲突
                 return false;
             }
         }

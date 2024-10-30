@@ -1,17 +1,17 @@
 //
 // Created by 11818 on 2024/7/15.
 //
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
 
 
 // Definition for singly-linked list.
-  struct ListNode {
- 	int val;
- 	struct ListNode *next;
- 	ListNode(int x) : val(x), next(nullptr) {}
-  };
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
 
 class Solution {
 public:
@@ -23,15 +23,15 @@ public:
      * @param val int整型
      * @return ListNode类
      */
-    ListNode* deleteNode(ListNode* head, int val) {
+    ListNode *deleteNode(ListNode *head, int val) {
         // write code here
-        ListNode* virtual_node = new ListNode(0);
+        ListNode *virtual_node = new ListNode(0);
         virtual_node->next = head;
-        ListNode* cur = virtual_node;
-        while(cur->next != nullptr){
-            if(cur->next->val == val){
+        ListNode *cur = virtual_node;
+        while (cur->next != nullptr) {
+            if (cur->next->val == val) {
                 cur->next = cur->next->next;
-            }else{
+            } else {
                 cur = cur->next;
             }
         }
@@ -39,16 +39,16 @@ public:
     }
 };
 
-int main(){
+int main() {
     Solution s;
-    ListNode* head = new ListNode(1);
+    ListNode *head = new ListNode(1);
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);
     head->next->next->next = new ListNode(4);
     int val = 3;
-    ListNode* res = s.deleteNode(head, val);
-    while(res != nullptr){
-        cout<<res->val<<" ";
+    ListNode *res = s.deleteNode(head, val);
+    while (res != nullptr) {
+        cout << res->val << " ";
         res = res->next;
     }
     return 0;

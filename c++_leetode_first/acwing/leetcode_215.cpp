@@ -3,10 +3,10 @@
 //
 // 215. Kth Largest Element in an Array
 
-#include <iostream>
-#include <vector>
 #include <algorithm>
+#include <iostream>
 #include <queue>
+#include <vector>
 
 
 using namespace std;
@@ -28,39 +28,37 @@ using namespace std;
 //};
 
 //第二种方法：快速排序算法
-class Solution{
+class Solution {
 public:
-    int solve(vector<int>& nums,int l, int r, int k){
+    int solve(vector<int> &nums, int l, int r, int k) {
         //k这里面表示的是是第k个大数
-        if(r == l)
+        if (r == l)
             return nums[l];
         //为何要取这一步，是因为可能最终要算的那半个区域里面要进行一下这样的同步
-        int pivot = nums[l], i = l , j = r;
-        while(i < j){
-            while(i < j && nums[j] < pivot)  j--;//这个是从大大小排列的
-            if(i < j)
-                    nums[i++] = nums[j];
-            while(i < j && nums[i] > pivot) i++;
-            if(i < j)
-                    nums[j--] = nums[i];
+        int pivot = nums[l], i = l, j = r;
+        while (i < j) {
+            while (i < j && nums[j] < pivot) j--;//这个是从大大小排列的
+            if (i < j)
+                nums[i++] = nums[j];
+            while (i < j && nums[i] > pivot) i++;
+            if (i < j)
+                nums[j--] = nums[i];
         }
-        if(i + 1 == k)
-                return pivot;
-        else if(i + 1 > k)
-            return solve(nums,l, i - 1,k);
+        if (i + 1 == k)
+            return pivot;
+        else if (i + 1 > k)
+            return solve(nums, l, i - 1, k);
         else
-            return solve(nums,i + 1,r,k);
+            return solve(nums, i + 1, r, k);
     }
-    int findKthLargest(vector<int>& nums, int k){
+    int findKthLargest(vector<int> &nums, int k) {
         int n = nums.size();
-        return solve(nums,0,n - 1,k);
+        return solve(nums, 0, n - 1, k);
     }
 };
-int main(){
+int main() {
     Solution s;
-    vector<int> nums = {3,2,1,5,6,4};
+    vector<int> nums = {3, 2, 1, 5, 6, 4};
     int k = 2;
-    cout<<s.findKthLargest(nums,k)<<endl;
+    cout << s.findKthLargest(nums, k) << endl;
 }
-
-

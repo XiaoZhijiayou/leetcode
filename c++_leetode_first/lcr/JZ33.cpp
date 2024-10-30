@@ -8,11 +8,11 @@ class Solution {
 public:
     bool VerifySquenceOfBST(vector<int> sequence) {
         int n = sequence.size();
-        if(n == 0) return false;
-        return dfs(sequence,0,n-1);
+        if (n == 0) return false;
+        return dfs(sequence, 0, n - 1);
     }
-    bool dfs(vector<int>& sequence,int left,int right){
-        if(left >= right) return true;
+    bool dfs(vector<int> &sequence, int left, int right) {
+        if (left >= right) return true;
 
         int root = sequence[right];
 
@@ -20,15 +20,15 @@ public:
 
         int j = right - 1;
 
-        while (j>=0 && sequence[j]>root) j--;
+        while (j >= 0 && sequence[j] > root) j--;
 
         //检查左子树是不是存在大于根节点的数
-        for(int i = left; i <= j; i++){
-            if(sequence[i] > root) return false;
+        for (int i = left; i <= j; i++) {
+            if (sequence[i] > root) return false;
         }
 
         //然后对左右子树分别进行判断
-        return dfs(sequence,left,j) && dfs(sequence,j+1,right-1);
+        return dfs(sequence, left, j) && dfs(sequence, j + 1, right - 1);
     }
 };
 

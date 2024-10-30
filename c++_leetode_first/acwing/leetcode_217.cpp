@@ -1,24 +1,24 @@
 //
 // Created by 11818 on 2024/10/27.
 //
-#include <unordered_set>
 #include <iostream>
-using namespace  std;
+#include <unordered_set>
+using namespace std;
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& nums) {
-        unordered_set<int>  st;
-        for(auto c : nums){
-            if(st.count(c))    return true;
+    bool containsDuplicate(vector<int> &nums) {
+        unordered_set<int> st;
+        for (auto c: nums) {
+            if (st.count(c)) return true;
             st.insert(c);
         }
         return false;
     }
 };
-int main(){
+int main() {
     Solution s;
-    vector<int> nums = {1,2,3,1};
-    cout<<s.containsDuplicate(nums)<<endl;
+    vector<int> nums = {1, 2, 3, 1};
+    cout << s.containsDuplicate(nums) << endl;
     return 0;
 }
 //unordered_set 是 C++ 标准库中的容器，和 set 类似，但底层是基于哈希表（hash table）实现的\

@@ -7,9 +7,9 @@ class Solution {
 public:
     int hammingWeight(int n) {
         int result = 0;
-        for(int i = 0; n != 0; i++){
-            int temp = n  & 1;
-            if(temp == 1){
+        for (int i = 0; n != 0; i++) {
+            int temp = n & 1;
+            if (temp == 1) {
                 result++;
             }
             n = n >> 1;
@@ -17,7 +17,7 @@ public:
         return result;
     }
 };
-int main(){
+int main() {
     Solution s;
     int n = 11;
     cout << s.hammingWeight(n) << endl;

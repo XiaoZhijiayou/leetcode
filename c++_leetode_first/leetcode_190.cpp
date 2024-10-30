@@ -8,17 +8,17 @@
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
-            uint32_t res = 0;
-            for (int i = 0; i < 32; i++) {
-                res = res * 2 + (n >> i & 1);//n >> i 取出第i位的二进制位，&1 取出最低位
-                //然后对应res在下次相加的时候就是取高位，所以res * 2
-            }
-            return res;
+        uint32_t res = 0;
+        for (int i = 0; i < 32; i++) {
+            res = res * 2 + (n >> i & 1);//n >> i 取出第i位的二进制位，&1 取出最低位
+            //然后对应res在下次相加的时候就是取高位，所以res * 2
+        }
+        return res;
     }
 };
 
 int main() {
     Solution s;
-    std::cout << s.reverseBits(43261596) << std::endl; // 964176192
+    std::cout << s.reverseBits(43261596) << std::endl;// 964176192
     return 0;
 }
