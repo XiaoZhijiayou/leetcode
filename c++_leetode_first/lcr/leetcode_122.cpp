@@ -3,15 +3,15 @@
 //
 #include <iostream>
 #include <string>
-using namespace  std;
+using namespace std;
 class Solution {
 public:
     string pathEncryption(string path) {
         string result;
-        for(int i = 0; i < path.size();i++){
-            if(path[i] == '.') {
+        for (int i = 0; i < path.size(); i++) {
+            if (path[i] == '.') {
                 result += ' ';
-            }else {
+            } else {
                 result += path[i];
             }
         }
@@ -19,9 +19,9 @@ public:
     }
 };
 
-int main(){
+int main() {
     Solution s;
     string path = "a.aef.qerf.bb";
-    cout << s.pathEncryption(path) <<endl;
+    cout << s.pathEncryption(path) << endl;
     return 0;
 }
