@@ -1,7 +1,25 @@
 cmake_minimum_required(VERSION 3.28)
 project(leetcode)
 
+if(MSVC)
+    add_compile_options("/utf-8")
+endif()
+
 set(CMAKE_CXX_STANDARD 17)
+
+# 添加子目录，构建 AVL 库
+add_subdirectory(data_struct/AVL)
+add_subdirectory(data_struct/BST)
+add_subdirectory(data_struct/RBT)
+
+add_executable(RBT_test data_struct/RBT.cpp)
+target_link_libraries(RBT_test PRIVATE RBT)
+
+ADD_executable(BST_test data_struct/test_BST.cpp)
+target_link_libraries(BST_test PRIVATE BST)
+
+add_executable(AVL_test data_struct/test_AVL.cpp)
+target_link_libraries(AVL_test PRIVATE AVL)
 
 add_executable(leetcode_190 c++_leetode_first/leetcode_190.cpp)
 add_executable(leetcde_191 c++_leetode_first/leetode_191.cpp)
@@ -53,3 +71,4 @@ add_executable(LCR_131 c++_leetode_first/lcr/LCR_131.cpp)
 add_executable(LCR_133 c++_leetode_first/lcr/LCR_133.cpp)
 add_executable(LCR_134 c++_leetode_first/lcr/LCR_134.cpp)
 add_executable(leetcode994 c++_leetode_first/hot100/leetcode994.cpp)
+add_executable(leetcode_704 c++_leetode_first/代码随想录/leetcode_704.cpp)
