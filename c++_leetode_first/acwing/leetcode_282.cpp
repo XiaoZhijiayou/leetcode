@@ -40,7 +40,7 @@ public:
                     path[len] = '*';
                     dfs(num,i + 1,len + 1, a, b * c,target);
                 }
-                if(num[u] == '0') break;
+                if(num[u] == '0') break;//这里为何是break掉就是因为如果c的开头就是0的话构成不了c这个值
             }
         }
     }
