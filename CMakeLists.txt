@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.28)
 project(leetcode)
 
-if(MSVC)
+if (MSVC)
     add_compile_options("/utf-8")
-endif()
+endif ()
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -78,3 +78,6 @@ add_executable(leetcode_273 c++_leetode_first/acwing/leetcode_273.cpp)
 add_executable(leetcode_274 c++_leetode_first/acwing/leetcode_274.cpp)
 add_executable(leetcode_275 c++_leetode_first/acwing/leetcode_275.cpp)
 add_executable(leetcode_282 c++_leetode_first/acwing/leetcode_282.cpp)
+add_executable(leetcode_287 c++_leetode_first/acwing/leetcode_287.cpp)
+add_executable(leetcode_289 c++_leetode_first/acwing/leetcode_289.cpp)
+add_executable(leetcode_290 c++_leetode_first/acwing/leetcode_290.cpp)

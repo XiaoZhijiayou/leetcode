@@ -10,19 +10,19 @@
 //2.将子表两两合并，每合并一次，就会产生一个新的且更长的有序表，重复这一步骤，直到最后只剩下一个子表，这个子表就是排好序的线性表。
 #include <iostream>
 using namespace std;
-struct ListNode{
+struct ListNode {
     int val;
     ListNode *next;
-    ListNode() : val(0),next(nullptr) {}
+    ListNode() : val(0), next(nullptr) {}
     ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x , ListNode* next): val(x),next(next) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
 class Solution {
 public:
-    ListNode* sortList(ListNode* head) {
+    ListNode *sortList(ListNode *head) {
         int n = 0;
-        for (auto p = head; p; p = p->next) n ++ ;
+        for (auto p = head; p; p = p->next) n++;
 
         auto dummy = new ListNode(-1);
         dummy->next = head;
@@ -30,14 +30,15 @@ public:
             auto cur = dummy;
             for (int j = 1; j + i <= n; j += i * 2) {
                 auto p = cur->next, q = p;
-                for (int k = 0; k < i; k ++ ) q = q->next;
+                for (int k = 0; k < i; k++) q = q->next;
                 int x = 0, y = 0;
                 while (x < i && y < i && p && q) {
-                    if (p->val <= q->val) cur = cur->next = p, p = p->next, x ++ ;
-                    else cur = cur->next = q, q = q->next, y ++ ;
+                    if (p->val <= q->val) cur = cur->next = p, p = p->next, x++;
+                    else
+                        cur = cur->next = q, q = q->next, y++;
                 }
-                while (x < i && p) cur = cur->next = p, p = p->next, x ++ ;
-                while (y < i && q) cur = cur->next = q, q = q->next, y ++ ;
+                while (x < i && p) cur = cur->next = p, p = p->next, x++;
+                while (y < i && q) cur = cur->next = q, q = q->next, y++;
                 cur->next = q;
             }
         }
@@ -46,7 +47,7 @@ public:
     }
 };
 
-int main(){
+int main() {
     auto head = new ListNode(-1);
     head->next = new ListNode(5);
     head->next->next = new ListNode(3);
