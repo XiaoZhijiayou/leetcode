@@ -112,3 +112,6 @@ add_executable(kama_95_bellman_ford_DNWC c++_leetode_first/代码随想录/graph
 add_executable(kama_96 c++_leetode_first/代码随想录/graph_theory/kama_96.cpp)
 add_executable(kama_97 c++_leetode_first/代码随想录/graph_theory/kama_97.cpp)
 add_executable(kama_126_A_star c++_leetode_first/代码随想录/graph_theory/kama_126_A_star.cpp)
+add_executable(leetcode_27 c++_leetode_first/代码随想录/vector/leetcode_27.cpp)
+add_executable(leetcode_977 c++_leetode_first/代码随想录/vector/leetcode_977.cpp)
+add_executable(leetcode_209 c++_leetode_first/代码随想录/vector/leetcode_209.cpp)
