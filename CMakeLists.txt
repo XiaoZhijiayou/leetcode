@@ -157,3 +157,7 @@ add_executable(leetcode_15 c++_leetode_first/代码随想录/hash/leetcode_15.cp
 add_executable(leetcode_383 c++_leetode_first/代码随想录/hash/leetcode_383.cpp)
 add_executable(leetcode_344 c++_leetode_first/代码随想录/string/leetcode_344.cpp)
 add_executable(leetcode_541 c++_leetode_first/代码随想录/string/leetcode_541.cpp)
+add_executable(kama_54 c++_leetode_first/代码随想录/string/kama_54.cpp)
+add_executable(leetcode_151 c++_leetode_first/代码随想录/string/leetcode_151.cpp)
+add_executable(kama_55 c++_leetode_first/代码随想录/string/kama_55.cpp)
+add_executable(leetcode_28 c++_leetode_first/代码随想录/string/leetcode_28.cpp)
