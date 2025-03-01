@@ -5,6 +5,8 @@
 //做法：
 //将整数的二进制的每一位取出来，然后在对应上取高位，每一次取出来之后，依次加到答案的后面
 #include <iostream>
+#include <climits>
+#include <cstdint>
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {

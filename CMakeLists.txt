@@ -8,18 +8,18 @@ endif ()
 set(CMAKE_CXX_STANDARD 17)
 
 # 添加子目录，构建 AVL 库
-add_subdirectory(data_struct/AVL)
-add_subdirectory(data_struct/BST)
-add_subdirectory(data_struct/RBT)
+# add_subdirectory(data_struct/AVL)
+# add_subdirectory(data_struct/BST)
+# add_subdirectory(data_struct/RBT)
 
-add_executable(RBT_test data_struct/RBT.cpp)
-target_link_libraries(RBT_test PRIVATE RBT)
+# add_executable(RBT_test data_struct/RBT.cpp)
+# target_link_libraries(RBT_test PRIVATE RBT)
 
-ADD_executable(BST_test data_struct/test_BST.cpp)
-target_link_libraries(BST_test PRIVATE BST)
+# ADD_executable(BST_test data_struct/test_BST.cpp)
+# target_link_libraries(BST_test PRIVATE BST)
 
-add_executable(AVL_test data_struct/test_AVL.cpp)
-target_link_libraries(AVL_test PRIVATE AVL)
+# add_executable(AVL_test data_struct/test_AVL.cpp)
+# target_link_libraries(AVL_test PRIVATE AVL)
 
 add_executable(leetcode_190 c++_leetode_first/leetcode_190.cpp)
 add_executable(leetcde_191 c++_leetode_first/leetode_191.cpp)
@@ -27,7 +27,6 @@ add_executable(leetcode_198 c++_leetode_first/leetcode_198.cpp)
 add_executable(leetcode_201 c++_leetode_first/leetcode_201.cpp)
 add_executable(leetocode_204 c++_leetode_first/leetocode_204.cpp)
 add_executable(leetcode_205 c++_leetode_first/leetcode_205.cpp)
-add_executable(lcr_001 c++_leetode_first/lcr/lcr_001.cpp)
 add_executable(leetcode_3180 c++_leetode_first/leetcode_3180.cpp)
 add_executable(leetcode_3181 c++_leetode_first/leetcode_3181.cpp)
 add_executable(leetcode_207 c++_leetode_first/acwing/leetcode_207.cpp)
@@ -70,7 +69,6 @@ add_executable(leetcode_633 c++_leetode_first/leetcode_633.cpp)
 add_executable(LCR_131 c++_leetode_first/lcr/LCR_131.cpp)
 add_executable(LCR_133 c++_leetode_first/lcr/LCR_133.cpp)
 add_executable(LCR_134 c++_leetode_first/lcr/LCR_134.cpp)
-add_executable(leetcode994 c++_leetode_first/hot100/leetcode994.cpp)
 add_executable(leetcode_704 c++_leetode_first/代码随想录/vector/leetcode_704.cpp)
 add_executable(leetcode_148 c++_leetode_first/acwing/leetcode_148.cpp)
 add_executable(leetcode_268 c++_leetode_first/acwing/leetcode_268.cpp)
@@ -162,3 +160,9 @@ add_executable(leetcode_151 c++_leetode_first/代码随想录/string/leetcode_15
 add_executable(kama_55 c++_leetode_first/代码随想录/string/kama_55.cpp)
 add_executable(leetcode_28 c++_leetode_first/代码随想录/string/leetcode_28.cpp)
 add_executable(leetcode_459 c++_leetode_first/代码随想录/string/leetcode_459.cpp)
+
+
+
+# 日期： 2025.2.27
+add_subdirectory(c++_leetode_first)
+add_subdirectory(代码随想录)

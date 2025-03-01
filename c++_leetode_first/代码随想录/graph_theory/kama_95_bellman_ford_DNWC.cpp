@@ -7,6 +7,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <climits>
 using namespace std;
 int main() {
     int n, m, p1, p2, val;

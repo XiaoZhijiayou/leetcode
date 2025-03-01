@@ -8,6 +8,7 @@
  * */
 //采用二分的方法实现
 #include <iostream>
+#include <climits>
 using namespace std;
 class Solution {
 public:

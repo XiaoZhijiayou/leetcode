@@ -8,6 +8,7 @@
 //minDist数组 用来记录 每一个节点距离源点的最小距离
 #include <iostream>
 #include <vector>
+#include <climits>
 using namespace std;
 int main() {
     int n, m, p1, p2, val;

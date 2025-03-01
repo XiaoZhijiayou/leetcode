@@ -4,3 +4,7 @@
 
 //96.城市间货物运输|||
 //bellman_ford之单源有限最短路
+
+int main() {
+    return 0;
+}

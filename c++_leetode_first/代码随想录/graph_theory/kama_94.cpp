@@ -7,6 +7,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <climits>
 using namespace std;
 int main() {
     int n, m, p1, p2, val;
@@ -33,7 +34,8 @@ int main() {
             }
         }
     }
-    if (minDist[end] == INT_MAX) cout << "unconnected" << endl;
+    if (minDist[end] == INT_MAX) 
+        cout << "unconnected" << endl;
     else
         cout << minDist[end] << endl;
     return 0;

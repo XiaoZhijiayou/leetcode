@@ -29,3 +29,7 @@ public:
         return slow;
     }
 };
+
+int main() {
+    return 0;
+}

@@ -5,6 +5,7 @@
 #include <list>
 #include <queue>
 #include <vector>
+#include <climits>
 using namespace std;
 //小顶堆
 class myComparsion {

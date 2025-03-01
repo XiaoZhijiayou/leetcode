@@ -46,7 +46,7 @@ public:
             if (s[i] == s[j + 1]) {///找到相同的前后缀
                 j++;
             }
-            next[i] == j;/// 将 j前缀的长度赋给next[i]
+            next[i] = j;/// 将 j前缀的长度赋给next[i]
         }
     }
     int strStr(string haystack, string needle) {

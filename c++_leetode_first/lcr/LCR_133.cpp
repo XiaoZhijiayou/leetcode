@@ -2,6 +2,7 @@
 // Created by 11818 on 2024/11/7.
 //
 #include <iostream>
+#include <cstdint>
 using namespace std;
 class Solution {
 public:

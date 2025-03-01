@@ -5,6 +5,7 @@
 //滑动窗口
 #include <iostream>
 #include <vector>
+#include <climits>
 using namespace std;
 
 class Solution {

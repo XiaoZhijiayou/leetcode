@@ -6,6 +6,7 @@
 #include <list>
 #include <queue>
 #include <vector>
+#include <climits>
 using namespace std;
 struct Edge {
     int to;

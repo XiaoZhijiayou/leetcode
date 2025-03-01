@@ -1,0 +1,7 @@
+add_executable(vector_704 vector_704.cpp)
+add_executable(vector_27 vector_27.cpp)
+add_executable(vector_977 vector_977.cpp)
+add_executable(vector_209 vector_209.cpp)
+add_executable(vector_59 vector_59.cpp)
+add_executable(vector_58 vector58.cpp)
+add_executable(vector_44 vector_44.cpp)
